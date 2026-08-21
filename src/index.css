@@ -1,0 +1,71 @@
+css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #2563eb;
+    --color-bg: #ffffff;
+    --color-text: #1a1a1a;
+    --color-muted: #6b7280;
+    --font-base: 'Inter', sans-serif;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --radius: 8px;
+}
+
+[data-theme="dark"] {
+    --color-primary: #3b82f6;
+    --color-bg: #1a1a1a;
+    --color-text: #f5f5f5;
+    --color-muted: #a1a1aa;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-base);
+    color: var(--color-text);
+    background: var(--color-bg);
+    transition: background-color 0.2s ease, color 0.2s ease;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
