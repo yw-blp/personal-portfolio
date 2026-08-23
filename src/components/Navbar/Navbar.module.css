@@ -37,11 +37,11 @@
     font-size: 1.1rem;
     padding: var(--spacing-sm);
     border-radius: var(--radius);
-    color: var(--color-muted);
+    color: var(--color-icon);
 }
 
 .themeToggle:hover {
-    background: rgba(128, 128, 128, 0.1);
+    background: var(--color-overlay);
 }
 
 .sunIcon,
@@ -68,7 +68,7 @@
     display: block;
     width: 22px;
     height: 2px;
-    background: var(--color-muted);
+    background: var(--color-icon);
 }
 
 .menuIcon::before,
@@ -89,26 +89,20 @@
 .menuIcon[data-open='false']::before,
 .menuIcon[data-open='false']::after {
     transition:
-    translate 0.2s ease,
-    background 0s ease,
-    rotate 0.2s ease;
-    transition-delay: 
-    0.2s,
-    0.2s,
-    0s;
+        translate 0.2s ease,
+        background 0s ease,
+        rotate 0.2s ease;
+    transition-delay: 0.2s, 0.2s, 0s;
 }
 
 .menuIcon[data-open='true'],
 .menuIcon[data-open='true']::before,
 .menuIcon[data-open='true']::after {
     transition:
-    translate 0.2s ease,
-    background 0s ease,
-    rotate 0.2s ease;
-    transition-delay: 
-    0s,
-    0.2s,
-    0.2s;
+        translate 0.2s ease,
+        background 0s ease,
+        rotate 0.2s ease;
+    transition-delay: 0s, 0.2s, 0.2s;
 }
 
 .menuIcon[data-open='true'] {
