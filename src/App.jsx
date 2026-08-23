@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Navbar from './components/Navbar/Navbar';
-//import Home from './sections/Home/Home';
+import Home from './sections/Home/Home';
 //import About from './sections/About/About';
 //import Stats from './sections/Stats/Stats';
 //import Projects from './sections/Projects/Projects';
@@ -14,6 +14,7 @@ function App() {
     return (
         <>
             <Navbar />
+            <Home />
         </>
     );
 }

@@ -1,0 +1,14 @@
+.outer {
+    background: var(--color-bg);
+    transition: var(--theme-transition);
+}
+
+.inner {
+    position: relative;
+    max-width: 1400px;
+    min-height: 640px;
+    /*max-height: 640px;*/
+    margin: 0 auto;
+    border: 1px solid black;
+    /*padding: var(--spacing-md) var(--spacing-md);*/
+}
