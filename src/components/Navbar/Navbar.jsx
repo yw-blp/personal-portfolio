@@ -8,6 +8,7 @@ const NAV_LINKS = [
     { label: 'Projects', href: '#projects' },
     { label: 'Education', href: '#education' },
     { label: 'Skills', href: '#skills' },
+    { label: 'Contact', href: '#contact' },
 ];
 
 function Navbar() {
