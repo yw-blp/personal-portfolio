@@ -1,17 +1,17 @@
-/*good*/
 .navbar {
     position: sticky;
     top: 0;
     z-index: 100;
     background: var(--color-bg);
     border-bottom: 1px solid rgba(128, 128, 128, 0.15);
+    transition: var(--theme-transition);
 }
-/*good*/
+
 .inner {
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
-    padding: var(--spacing-sm) var(--spacing-lg);
+    padding: var(--spacing-md) var(--spacing-lg);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -25,7 +25,7 @@
 }
 
 .links a {
-    color: var(--color-muted);
+    color: var(--color-text);
     font-weight: 500;
     transition: color 0.2s ease;
 }
@@ -38,10 +38,24 @@
     font-size: 1.1rem;
     padding: var(--spacing-sm);
     border-radius: var(--radius);
+    color: var(--color-muted);
 }
 
 .themeToggle:hover {
     background: rgba(128, 128, 128, 0.1);
+}
+
+.sunIcon,
+.moonIcon {
+    transition: color 0.2s ease;
+}
+
+.themeToggle:hover .sunIcon {
+    color: #fbbf24;
+}
+
+.themeToggle:hover .moonIcon {
+    color: #0f3289;
 }
 
 .menuToggle {
@@ -55,10 +69,10 @@
     display: block;
     width: 22px;
     height: 2px;
-    background: var(--color-text);
+    background: var(--color-muted);
     transition:
-        transform 0.2s ease,
-        opacity 0.2s ease;
+    transform 0.2s ease,
+    opacity 0.2s ease;
 }
 
 .menuIcon::before,

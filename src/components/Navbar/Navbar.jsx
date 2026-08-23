@@ -1,18 +1,19 @@
 import { useState } from 'react';
 import useTheme from '../../hooks/useTheme';
 import styles from './Navbar.module.css';
+import { FiSun, FiMoon } from 'react-icons/fi';
+
+const NAV_LINKS = [
+    { label: 'Home', href: '#home' },
+    { label: 'Projects', href: '#projects' },
+    { label: 'Education', href: '#education' },
+    { label: 'Skills', href: '#skills' },
+];
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const { theme, toggleTheme } = useTheme();
     const nextTheme = theme === 'light' ? 'dark' : 'light';
-
-    const NAV_LINKS = [
-        { label: 'Home', href: '#home' },
-        { label: 'Projects', href: '#projects' },
-        { label: 'Education', href: '#education' },
-        { label: 'Skills', href: '#skills' },
-    ];
 
     return (
         <nav className={styles.navbar}>
@@ -25,7 +26,7 @@ function Navbar() {
                 >
                     <span className={styles.menuIcon} data-open={menuOpen} />
                 </button>
-                
+
                 <ul className={`${styles.links} ${menuOpen ? styles.linksOpen : ''}`}>
                     {NAV_LINKS.map((link) => (
                         <li key={link.href}>
@@ -41,7 +42,11 @@ function Navbar() {
                     onClick={toggleTheme}
                     aria-label={`Switch to ${nextTheme} mode`}
                 >
-                    {theme === 'light' ? '🌙' : '☀️'}
+                    {theme === 'light' ? (
+                        <FiMoon className={styles.moonIcon} />
+                    ) : (
+                        <FiSun className={styles.sunIcon} />
+                    )}
                 </button>
             </div>
         </nav>
