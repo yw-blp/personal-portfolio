@@ -9,6 +9,7 @@
     --color-bg: #ffffff;
     --color-text: #1a1a1a;
     --color-muted: #6b7280;
+    --theme-transition: background-color 0.2s ease, color 0.2s ease;
     --font-base: 'Inter', sans-serif;
     --spacing-sm: 0.5rem;
     --spacing-md: 1rem;
@@ -19,8 +20,8 @@
 [data-theme="dark"] {
     --color-primary: #3b82f6;
     --color-bg: #1a1a1a;
-    --color-text: #f5f5f5;
-    --color-muted: #a1a1aa;
+    --color-text: #a1a1aa;
+    --color-muted: #f5f5f5;
 }
 
 html {
@@ -31,7 +32,7 @@ body {
     font-family: var(--font-base);
     color: var(--color-text);
     background: var(--color-bg);
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: var(--theme-transition);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 }
