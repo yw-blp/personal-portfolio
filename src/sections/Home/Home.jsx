@@ -2,11 +2,14 @@ import { useRef } from 'react';
 import styles from './Home.module.css';
 
 function Home() {
-    const innerRef = useRef(null);
+    const outerRef = useRef(null);
     const gridOverlayRef = useRef(null);
+    const borderOverlayRef = useRef(null);
 
     const handleMouseMove = (e) => {
-        const rect = innerRef.current.getBoundingClientRect();
+        const rect = outerRef.current.getBoundingClientRect();
+        borderOverlayRef.current.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+        borderOverlayRef.current.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
         gridOverlayRef.current.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
         gridOverlayRef.current.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
     };
@@ -20,15 +23,14 @@ function Home() {
     };
 
     return (
-        <div className={styles.outer}>
+        <div ref={outerRef} className={styles.outer} onMouseMove={handleMouseMove}>
             <div
-                ref={innerRef}
                 className={styles.inner}
-                onMouseMove={handleMouseMove}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
             >
                 <div className={styles.dotOverlay} />
+                <div ref={borderOverlayRef} className={styles.borderOverlay} />
                 <div ref={gridOverlayRef} className={styles.gridOverlay} data-active="false" />
             </div>
         </div>
