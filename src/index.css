@@ -10,7 +10,9 @@
     --color-text: #1a1a1a;
     --color-icon: #6b7280;
     --color-dot: rgba(26, 26, 26, 0.16);
+    --color-grid: color-mix(in srgb, var(--color-dot) 25%, transparent);
     --color-overlay: rgba(128, 128, 128, 0.1);
+    --reveal-radius: 180px;
     --theme-transition: background-color 0.2s ease, color 0.2s ease;
     --font-base: 'Inter', sans-serif;
     --spacing-sm: 0.5rem;
