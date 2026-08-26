@@ -8,11 +8,12 @@ function Home() {
     useRelativeMousePosition(innerRef);
 
     return (
-        <div className={styles.outer}>
+        <div id='home' className={styles.outer}>
             <div ref={innerRef} className={styles.inner}>
                 <div className={styles.dotOverlay} />
                 <div className={styles.borderOverlay} />
                 <div className={styles.gridOverlay} />
+                <div className={styles.content} />
             </div>
         </div>
     );
