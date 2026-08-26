@@ -19,6 +19,8 @@
     --spacing-md: 1rem;
     --spacing-lg: 2rem;
     --radius: 8px;
+    --mouse-x: -9999px;
+    --mouse-y: -9999px;
 }
 
 [data-theme="dark"] {
