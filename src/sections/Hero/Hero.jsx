@@ -1,14 +1,14 @@
 import { useRef } from 'react';
 import useRelativeMousePosition from '../../hooks/useRelativeMousePosition';
-import styles from './Home.module.css';
+import styles from './Hero.module.css';
 
-function Home() {
+function Hero() {
     const innerRef = useRef(null);
 
     useRelativeMousePosition(innerRef);
 
     return (
-        <div id='home' className={styles.outer}>
+        <div id='hero' className={styles.outer}>
             <div ref={innerRef} className={styles.inner}>
                 <div className={styles.dotOverlay} />
                 <div className={styles.borderOverlay} />
@@ -19,4 +19,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default Hero;
