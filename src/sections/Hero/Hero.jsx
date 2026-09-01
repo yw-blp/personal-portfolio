@@ -8,13 +8,21 @@ function Hero() {
     useRelativeMousePosition(innerRef);
 
     return (
-        <div id='hero' className={styles.outer}>
+        <div id="hero" className={styles.outer}>
             <div ref={innerRef} className={styles.inner}>
                 {/*<div className={styles.dotOverlay} />
                 <div className={styles.borderOverlay} />
                 <div className={styles.gridOverlay} />*/}
                 <div className={styles.content}>
-                    yrs
+                    <div className={styles.header}>
+                        <div className={styles.eyebrow}>Frontend Developer</div>
+                        <div className={styles.name}>
+                            Yuuki
+                            <br />
+                            Watanabe
+                        </div>
+                    </div>
+                    <div className={styles.frame} />
                 </div>
             </div>
         </div>

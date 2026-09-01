@@ -12,7 +12,7 @@
     --color-dot: rgba(26, 26, 26, 0.16);
     --color-grid: color-mix(in srgb, var(--color-dot) 25%, transparent);
     --color-overlay: rgba(128, 128, 128, 0.1);
-    --theme-transition: background-color 0.2s ease, color 0.2s ease;
+    --theme-transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
     --font-base: 'Inter', sans-serif;
     --font-heading: 'Merriweather', serif;
     --font-mono: 'Fira Code', monospace;
@@ -26,7 +26,8 @@
     --tracking-tight: -0.02em;
     --tracking-normal: 0;
     --tracking-wide: 0.04em;
-    --tracking-widest: 0.1em;
+    --tracking-wider: 0.1em;
+    --tracking-widest: 0.125em;
     --spacing-sm: 0.5rem;
     --spacing-md: 1rem;
     --spacing-lg: 2rem;

@@ -5,11 +5,9 @@
 
 .inner {
     position: relative;
-    max-width: 1400px;
-    min-height: 640px;
+    max-width: 1200px;
     margin: 0 auto;
     z-index: 0;
-    padding: var(--spacing-lg) var(--spacing-lg);
 }
 
 .dotOverlay {
@@ -84,4 +82,95 @@
 .content {
     position: relative;
     z-index: 2;
+    min-height: 640px;
+    padding: var(--spacing-md) var(--spacing-lg);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /*align-items: center;*/
+}
+
+.content::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: var(--spacing-lg);
+    width: calc(50% - var(--spacing-lg));
+    border-bottom: 1px solid var(--color-text);
+    transition: var(--theme-transition);
+}
+
+.header {
+    grid-column: 1;
+    min-width: 0;
+    align-self: end;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.eyebrow {
+    font-family: var(--font-base);
+    font-weight: 100;
+    font-size: var(--font-size-xl);
+    letter-spacing: var(--tracking-wider);
+}
+
+.name {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: var(--font-size-4xl);
+    letter-spacing: var(--tracking-widest);
+    line-height: 1.4;
+}
+
+.frame {
+    grid-column: 2;
+    align-self: end;
+    justify-self: end;
+    width: min(400px, 85%);
+    aspect-ratio: 3 / 4;
+    border: solid 1px black;
+    background-color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        min-height: auto;
+        padding: var(--spacing-lg) var(--spacing-lg);
+    }
+
+    .content::after {
+        display: none;
+    }
+
+    .header {
+        order: 1;
+        align-self: auto;
+        margin-bottom: 0;
+        padding-bottom: var(--spacing-lg);
+        transition: var(--theme-transition);
+    }
+
+    .name {
+        font-size: var(--font-size-3xl);
+    }
+
+    .eyebrow {
+        font-size: var(--font-size-lg);
+    }
+
+    .frame {
+        order: 2;
+        justify-self: center;
+        align-self: center;
+        width: min(480px, 100%);
+    }
+}
+
+@media (max-width: 420px) {
+    .name {
+        font-size: var(--font-size-2xl);
+    }
 }
