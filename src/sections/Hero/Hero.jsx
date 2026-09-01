@@ -10,10 +10,12 @@ function Hero() {
     return (
         <div id='hero' className={styles.outer}>
             <div ref={innerRef} className={styles.inner}>
-                <div className={styles.dotOverlay} />
+                {/*<div className={styles.dotOverlay} />
                 <div className={styles.borderOverlay} />
-                <div className={styles.gridOverlay} />
-                <div className={styles.content} />
+                <div className={styles.gridOverlay} />*/}
+                <div className={styles.content}>
+                    yrs
+                </div>
             </div>
         </div>
     );

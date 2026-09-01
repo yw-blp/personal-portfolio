@@ -13,7 +13,9 @@ function App() {
     return (
         <>
             <Navbar />
-            <Home />
+            <main>
+                <Home />
+            </main>
         </>
     );
 }

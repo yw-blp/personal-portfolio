@@ -9,7 +9,7 @@
     min-height: 640px;
     margin: 0 auto;
     z-index: 0;
-    /*padding: var(--spacing-md) var(--spacing-md);*/
+    padding: var(--spacing-lg) var(--spacing-lg);
 }
 
 .dotOverlay {
