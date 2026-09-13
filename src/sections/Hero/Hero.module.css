@@ -82,11 +82,13 @@
 .content {
     position: relative;
     z-index: 2;
-    min-height: 640px;
+    min-height: calc(100vh - var(--navbar-height) - var(--spacing-lg));
     padding: var(--spacing-md) var(--spacing-lg);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: end;
+    gap: var(--spacing-lg);
 }
 
 .content::after {
@@ -100,7 +102,6 @@
 }
 
 .header {
-    align-self: end;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
@@ -122,7 +123,8 @@
 }
 
 .frame {
-    width: min(400px, 85%);
+    display: flex;
+    width: 400px;
     aspect-ratio: 3 / 4;
     border: solid 1px black;
     background-color: #e0e0e0;
