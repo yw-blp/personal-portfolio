@@ -1,0 +1,40 @@
+.outer {
+    background-color: var(--color-bg);
+    transition: var(--theme-transition);
+}
+
+.inner {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 0;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-lg) var(--spacing-lg);
+}
+
+.headerArea {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+}
+
+.header {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: var(--font-size-3xl);
+    letter-spacing: var(--tracking-wide);
+}
+
+.projectTitle {
+    font-family: var(--font-heading);
+    font-weight: 200;
+    font-size: var(--font-size-lg);
+    letter-spacing: var(--tracking-wide);
+}

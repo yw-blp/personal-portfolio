@@ -1,8 +1,8 @@
 import Navbar from './components/Navbar/Navbar';
 import Home from './sections/Hero/Hero';
-//import About from './sections/About/About';
+import About from './sections/About/About';
 //import Stats from './sections/Stats/Stats';
-//import Projects from './sections/Projects/Projects';
+import Projects from './sections/Projects/Projects';
 //import Education from './sections/Education/Education';
 //import Skills from './sections/Skills/Skills';
 //import Contact from './sections/Contact/Contact';
@@ -15,6 +15,8 @@ function App() {
             <Navbar />
             <main>
                 <Home />
+                <About />
+                <Projects />
             </main>
         </>
     );
