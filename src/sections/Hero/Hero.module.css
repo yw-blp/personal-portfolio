@@ -86,7 +86,6 @@
     padding: var(--spacing-md) var(--spacing-lg);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /*align-items: center;*/
 }
 
 .content::after {
@@ -100,8 +99,6 @@
 }
 
 .header {
-    grid-column: 1;
-    min-width: 0;
     align-self: end;
     display: flex;
     flex-direction: column;
@@ -124,7 +121,6 @@
 }
 
 .frame {
-    grid-column: 2;
     align-self: end;
     justify-self: end;
     width: min(400px, 85%);
