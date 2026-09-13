@@ -2,7 +2,7 @@ import styles from './About.module.css';
 
 function About() {
     return (
-        <div id="about" className={styles.outer}>
+        <section id="about" className={styles.outer}>
             <div className={styles.inner}>
                 <div className={styles.content}>
                     <div className={styles.frame} />
@@ -21,7 +21,7 @@ function About() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 

@@ -8,7 +8,7 @@ function Hero() {
     useRelativeMousePosition(innerRef);
 
     return (
-        <div id="hero" className={styles.outer}>
+        <section id="hero" className={styles.outer}>
             <div ref={innerRef} className={styles.inner}>
                 {/*<div className={styles.dotOverlay} />
                 <div className={styles.borderOverlay} />
@@ -25,7 +25,7 @@ function Hero() {
                     <div className={styles.frame} />
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 

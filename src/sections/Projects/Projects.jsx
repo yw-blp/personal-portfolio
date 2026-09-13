@@ -2,7 +2,7 @@ import styles from './Projects.module.css';
 
 function Projects() {
     return (
-        <div id="projects" className={styles.outer}>
+        <section id="projects" className={styles.outer}>
             <div className={styles.inner}>
                 <div className={styles.content}>
                     <div className={styles.headerArea}>
@@ -14,7 +14,7 @@ function Projects() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 
